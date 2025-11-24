@@ -31,4 +31,11 @@ public interface EmployeeService {
     * 启用或禁用账号
     * */
      void startOrStop(Integer status, Long id);
+
+     /*
+     * 根据员工ID获得员工信息
+     * */
+    Employee getById(long id);
+
+    void update(EmployeeDTO employeeDTO);
 }
