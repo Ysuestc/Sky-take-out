@@ -54,7 +54,7 @@
         </if>
     </select>
 
-    <select id="list" parameterType="Setmeal" resultType="Setmeal">
+    <select id="list" parameterType="Setmeal" resultType="com.sky.entity.Setmeal">
         select * from setmeal
         <where>
             <if test="name != null">
