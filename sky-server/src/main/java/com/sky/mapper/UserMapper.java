@@ -16,4 +16,8 @@ public interface UserMapper {
      * @param user
      */
     void insert(User user);
+
+    //根据主键id获取用户user对象
+    @Select("select * from user where id = #{userId}")
+    User getById(Long userId);
 }
