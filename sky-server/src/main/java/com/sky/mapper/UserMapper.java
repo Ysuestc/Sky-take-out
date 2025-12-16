@@ -9,6 +9,11 @@ import java.util.Map;
 @Mapper
 public interface UserMapper {
 
+    /**
+     * 根据openid获取对应用户
+     * @param openid
+     * @return
+     */
     @Select("select * from user where openid = #{openid}")
     User getByOpenid(String openid);
 
