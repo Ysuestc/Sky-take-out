@@ -87,7 +87,7 @@ public interface OrderMapper {
      * @param map
      * @return
      */
-    Integer getByMap(Map map);
+    Integer countByMap(Map map);
 
     /**
      * 统计销量排名

@@ -163,13 +163,13 @@ public class ReportServiceImpl implements ReportService {
             map.put("begin",beginTime);
             map.put("end",endTime);
             //查询每天的订单数 select count(id) from orders where order_time < ? and create_time > ?
-            Integer orderCount = orderMapper.getByMap(map);
+            Integer orderCount = orderMapper.countByMap(map);
 
 
             //再放状态信息，查询每天有效的订单数量
             map.put("status",Orders.COMPLETED);
             //查询每天的有效订单数 select count(id) from orders where order_time < ? and create_time > ? and status = 5
-            Integer validOrderCount = orderMapper.getByMap(map);
+            Integer validOrderCount = orderMapper.countByMap(map);
 
             //放到List集合当中
             orderCountList.add(orderCount);
